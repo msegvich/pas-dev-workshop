@@ -1,0 +1,47 @@
+spring:
+  jpa:
+    generate-ddl: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    com.zaxxer.hikari: DEBUG
+---
+spring:
+  profiles: mysql
+#  datasource:
+#    url: "jdbc:mysql://localhost/music"
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username:
+#    password:
+#    hikari:
+#      connection-test-query: SELECT 1 FROM DUAL
+#      minimum-idle: 1
+#      maximum-pool-size: 5
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  cloud:
+    gcp:
+      sql:
+        instance-connection-name: fe-msegvich:us-central1:pcf-sb-1-1533823374314934615
+        database-name: pcf-sb-2-1533823559129910012
+
+---
+spring:
+  profiles: postgres
+  datasource:
+    url: "jdbc:postgresql://localhost/music"
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.ProgressDialect

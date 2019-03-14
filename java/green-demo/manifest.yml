@@ -1,0 +1,7 @@
+---
+applications:
+- name: hello-green
+  memory: 1G
+  path: target/green-demo-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  random-route: true

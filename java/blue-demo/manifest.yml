@@ -1,0 +1,7 @@
+---
+applications:
+- name: hello-blue
+  memory: 1G
+  path: target/blue-demo-0.0.1-SNAPSHOT.jar
+  buildpack: java_buildpack
+  random-route: true
