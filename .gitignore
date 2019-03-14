@@ -1,0 +1,11 @@
+**/build
+**/target
+**/classes
+.settings
+.project
+.classpath
+.gradle
+.springBeans
+.factorypath
+**/.DS_Store
+**/.idea
