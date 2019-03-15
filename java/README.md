@@ -84,7 +84,7 @@ Configure AutoScaling
 10. (Optional) Install CF CLI MySQL plugin
 https://github.com/andreasf/cf-mysql-plugin
   * Use the plugin to securely connect and view your DB using mysql CLI
-`$ cf mysql your-db-service`
+`$ cf mysql music-db`
 `mysql> show tables`
 `mysql> describe album`
 `mysql> select artist from album;`
